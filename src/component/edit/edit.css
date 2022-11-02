@@ -1,0 +1,117 @@
+.Mainedit {
+    margin-top: 5rem;
+    border: 1px solid lightgray;
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+    height: 35rem;
+    justify-items: center;
+
+}
+
+.Updateprofile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 135.2px;
+    margin-top: 10px;
+}
+
+.UpdateUser {
+    margin-left: 20px;
+}
+
+.change {
+    margin-top: -15px;
+    cursor: pointer;
+    color: #0095f6;
+}
+
+.updatename {
+    margin-top: 60px;
+    margin-left: 15%;
+    font-size: 18px;
+    
+}
+
+.updateInput {
+    height: 40px;
+    margin-left: 4.2rem;
+    border: 1px solid lightgrey;
+    width: 17.4rem;
+}
+
+.usernameEdit {
+    margin-top: 3rem;
+    
+    margin-left: 15%;
+    font-size: 18px
+}
+
+.updateusername {
+    height: 40px;
+    margin-left: 30px;
+    width: 17.4rem;
+    border: 1px solid lightgrey;
+}
+
+.UpdateBtn {
+    margin-left: 15%;
+    margin-top: 4rem;
+    width: 70%;
+    height: 3rem;
+    background-color: #20a5fb;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 7px;
+    cursor: pointer;
+
+}
+.imgupdate{
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 10rem
+}
+.alertUpdate{
+    color: red;
+    height: 1.5rem;
+    margin-left: 20%;
+}
+/* start media query */
+@media only screen and (max-width: 500px) {
+    .Mainedit{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .Updateprofile{
+        margin-left: 0.9rem;
+        
+    }
+    .updatename{
+        margin-top: 1rem;
+        margin-left: 5%;
+        font-size:1rem;
+    }
+    .usernameEdit{
+        margin-left: 5%;
+        font-size:1rem;
+    }
+    .updateInput{
+        width: 75%;
+        margin-left: 0.9rem;
+    }
+    .updateusername{
+        width: 66%;
+        margin-left: 0.9rem;
+    }
+    .alertUpdate{
+        margin-bottom: 1rem;
+        margin-left: 3rem;
+
+    }
+    .UpdateBtn{
+        width: 90%;
+        margin-left: 5%;
+    }
+}

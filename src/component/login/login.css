@@ -1,0 +1,100 @@
+.login {
+    margin-top: 40px;
+    height: 450px;
+    width: 29%;
+    margin-left: 480px;
+    border: 0.5px solid lightgray;
+    text-align: center;
+}
+
+.bottom {
+    height: 60px;
+    width: 29%;
+    margin-left: 480px;
+    margin-top: 10px;
+    border: 0.5px solid lightgray;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.insta{
+    margin-top: 30px;
+}
+.username{
+    width: 80%;
+    height: 40px;
+    margin-top: 1rem;
+    border: 0.5px solid lightgray;
+}
+.email{
+    width: 80%;
+    height: 40px;
+    margin-top: 10px;
+    border: 0.5px solid lightgray;
+    
+}
+.btn{
+    margin-top: 20px;
+    height: 35px;
+    width: 81%;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #0095f6;
+    color: #fff;
+    font-size: 18px
+}
+.line{
+    width: 30%;
+    margin-top: 30px;
+    color: lightgrey;
+}
+.middel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1.4rem;
+}
+.google{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 25%;
+    margin-top: 10px;
+    
+    
+}
+#google{
+    cursor: pointer;
+}
+.forgot{
+    transform: translateY(-10px);
+    cursor: pointer;
+}
+.signin{
+    text-decoration: none;
+    color: #0095f6;
+    margin-left: 8px;
+}
+.account{
+    margin-left: 90px;
+}
+.alert{
+    color: rgb(211 28 28);
+    height: 2rem;
+}
+
+
+@media only screen and (max-width: 500px) {
+    .login{
+        width: 90%;
+        margin-left: 5%;
+        
+    }
+    .bottom{
+        width: 90%;
+        margin-left: 5%;
+    }
+}

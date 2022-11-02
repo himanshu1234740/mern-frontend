@@ -1,0 +1,91 @@
+.register{
+    border: 0.5px solid lightgrey;
+    width: 27%;
+    height: 35rem;
+    margin-top: 40px;
+    margin-left: 34%;
+    text-align: center;
+}
+.footer{
+    border: 0.5px solid lightgrey;
+    margin-left: 34%;
+    text-align: center;
+    width: 27%;
+    margin-top: 10px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.insta{
+    margin-top: 20px;
+}
+.para{
+    width: 80%;
+    margin-left: 10%;
+    color: rgb(152, 146, 146);
+}
+.line{
+    width: 30%;
+    margin-top: 30px;
+    color: lightgrey;
+}
+.middel{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    transform: translateY(-15px);
+}
+.google{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 25%;
+    margin-top: 10px;
+    
+    
+}
+#google{
+    cursor: pointer;
+}
+.form-control{
+    height: 35px;
+    width: 80%;
+    margin-top: 10px;
+}
+.signup{
+    height: 35px;
+    width: 82%;
+    margin-top: 20px;
+    cursor: pointer;
+    background-color: #4db6fa;
+    color: #fff;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    
+}
+#account{
+    margin-left: 80px;
+}
+.log{
+    text-decoration: none;
+    margin-top: 13px;
+    margin-left: 7px;
+    font-size: 18px;
+    color: #0095f6
+}
+@media only screen and (max-width: 500px) {
+    .register{
+        width: 90%;
+        margin-left: 5%;
+    }
+    .footer{
+        width: 90%;
+        margin-left: 5%;
+    }
+    #email{
+        margin-top: -5rem;
+    }
+}

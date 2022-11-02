@@ -1,0 +1,152 @@
+.userdetail {
+    margin-top: 80px;
+    
+    margin-left: 110px;
+
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.lin {
+    width: 70%;
+    color: lightgrey;
+    margin-top: 10rem;
+
+}
+
+.user {
+
+    margin-left: 50px;
+    font-size: 35px;
+
+}
+
+.userprofile {
+    cursor: pointer;
+    }
+
+.logout {
+    height: 3rem;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    width: 8rem;
+    background-color: #fff;
+    border: 1px solid lightgrey;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 18px
+}
+
+.postcount {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 3rem;
+}
+
+.UserNameId {
+    margin-left: 3rem;
+
+}
+
+.edit {
+    background-color: #fff;
+    border: 2px solid lightgrey;
+    cursor: pointer;
+    height: 2rem;
+    width: 7rem;
+    margin-left: 2rem;
+    
+}
+.profileImg{
+    border-radius: 10rem;
+    object-fit: cover;
+}
+/* start main div */
+
+.userPosts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+    margin-left: 15%;
+}
+
+.card {
+    margin: 1.1rem;
+    height: 18rem;
+    width: 18rem;
+    background: #fff;
+    
+    object-fit: cover;
+    border: 1px solid lightgrey;
+}
+.likeComment{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: grey
+}
+.userLike{
+    margin-left: 0.5rem;
+}
+.userComment{
+    margin-left: 1rem;
+}
+.img{
+    object-fit: cover;
+}
+.delete{
+    height: 40px;
+    width: 40px;
+    margin-top: 0.5rem;
+    margin-left: 6rem;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+    .delete{
+        margin-left: 1rem;
+    }
+    .profileImg{
+        height: 5rem;
+        width: 5rem;
+        margin-left: -3rem;
+        
+    }
+    .edit{
+        width: 5rem;
+        height: 1.6rem;
+        margin-left: -3rem;
+    }
+    .logout{
+        margin-top: 7.7rem;
+        margin-left: -66%;
+        font-size: 1rem;
+        height: 1.6rem;
+        width: 4.8rem;
+        border-radius: 0px;
+        border: 2px solid lightgrey
+        
+    }
+    .user{
+        margin-top: 0rem;
+        font-size: 1.1rem;
+        margin-left: 1rem;
+    }
+    .postcount{
+        margin-left: 1rem;
+    }
+    .UserNameId{
+        margin-left: 1rem;
+        margin-top: -0.5rem;
+    }
+    .userdetail{
+        height: 0rem;
+    }
+}
+

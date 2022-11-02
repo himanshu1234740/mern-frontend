@@ -1,0 +1,76 @@
+.navbar {
+    height: 65px;
+    border-bottom: 1px solid rgb(216 216 216);
+    width: 100%;
+    position: fixed;
+    top: 0;
+        
+}
+
+.flex {
+    margin-top: 0;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style: none;
+    height: 65px;
+
+}
+
+.sideItem {
+    margin-left: 30px;
+    margin-top: 10px;
+    
+    height: 40px;
+}
+.rightItem{
+    margin-left: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.home {
+    margin-left: 55%;
+  
+}
+.instaLogo{
+    height: 40px;
+    width: 120px;
+    
+}
+.camera{
+    width: 60px;
+}
+/* start media queary */
+@media only screen and (max-width: 500px) {
+    .flex{
+        margin-left: 0rem;
+        
+    }
+    .rightItem{
+        margin-top: -2.6rem;
+    }
+    .instaLogo{
+        height: 30px;
+        width: 100px;
+        margin-top: 0.6rem;
+        margin-left: 0rem;
+    
+    }
+    .sideItem{
+        margin-left: 0rem;
+    }
+    .rightItem{
+        margin-left: 5px;
+        margin-top: 1rem;
+    }
+    .home{
+        margin-left: 10%;
+        margin-right: 0rem;
+    }
+    .camera{
+        margin-left: -2rem;
+        width: 50px
+    }
+  }
+  

@@ -1,0 +1,168 @@
+.postItem {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-left: 30%;
+    height: 650px;
+    width: 500px;
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    
+
+}
+
+.topItem {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    cursor: pointer;
+   
+}
+
+.profile {
+    margin-top: 12px;
+    margin-left: 12px;
+    height: 45px;
+    width: 45px;
+    border-radius: 10rem;
+
+
+}
+
+.userName {
+    margin-left: 10px;
+}
+
+.userProfileName {
+    margin-top: -1.5rem;
+    margin-left: 10px;
+}
+
+.mainItem {
+    margin-bottom: 420px;
+
+    width: 100%;
+    height: 428px
+}
+
+.userImage {
+    object-fit: cover;
+}
+
+.like {
+    margin-top: 1px;
+    cursor: pointer;
+
+}
+
+.comment {
+    margin-left: 2rem;
+    cursor: pointer;
+
+}
+
+.bottomSide {
+
+    margin-top: -6rem;
+    margin-left: 10px;
+}
+
+.title {
+    margin-top: 50px;
+}
+
+.desc {
+    margin-top: -15px;
+}
+
+.likeComment {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.likeCount {
+    margin-top: -1px;
+    margin-left: 5px;
+}
+
+/* comment section */
+.showUserComment {
+
+    margin-top: 0.5rem;
+    height: 3.6rem;
+}
+
+.userComment {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.userCommentImage {
+    height: 3.2rem;
+    width: 3.2rem;
+    margin-left: 0.5rem;
+    border-radius: 10rem;
+
+}
+
+.commentUsername {
+    margin-top: 0.2rem;
+    margin-left: 0.5rem;
+}
+
+.WhichComment {
+    margin-left: 0.5rem;
+    margin-top: -1.3rem;
+}
+
+.more {
+    margin-left: 80%;
+    margin-top: 1rem;
+    text-decoration: none;
+    font-size: 20px;
+    color: #0095f6;
+    height: 1.6rem;
+    width: 4rem;
+}
+
+.more:hover {
+    color: #2a5de8;
+}
+/* start media quary for responsive  */
+@media only screen and (max-width: 500px) {
+    .postItem{
+        margin-left: 0rem;
+        width: 90%;
+        margin-left: 5%;
+               
+    }
+    .userImage{
+        width: 100%;
+    }
+    .bottomSide{
+        margin-top: -6rem;
+    }
+.userCommentImage {
+    margin-left: 0rem;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.profile{
+    margin-left: 0rem;
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.topItem{
+    margin-left: 0.5rem;
+}
+.userName{
+    margin-top: 0.8rem;
+}
+
+}
+

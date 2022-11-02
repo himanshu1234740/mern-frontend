@@ -1,0 +1,54 @@
+.form{
+    margin-top: 100px;
+    margin-left: 35%;
+    text-align: center;
+    height: 25rem;
+    width: 30%;
+    border: 1px solid lightgrey;
+}
+
+.text{ 
+    height: 3rem;
+    margin-top: 20px;
+    margin-left: 0.4rem;
+    width: 80%;
+}
+.text:hover{ 
+    border: 2px solid #a316a2;
+}
+.textarea{
+    height: 3rem;
+    margin-top: 20px;
+    margin-left: 0.4rem;
+    width: 80%;
+    }
+.textarea:hover{ 
+    border: 2px solid #a316a2
+}
+.file{ 
+    margin-right: 95px;
+}
+.AddPost{
+    height: 50px;
+    margin-left: 0.4rem;
+    width: 81%;
+    margin-top: 0.2rem;
+    font-size: 18px;
+    border: 1px solid black;
+    cursor: pointer;
+    background-color:#aa59b9;
+    color: #fff;
+}
+.AddPost:hover{
+    background-color:#8f10a6;
+}
+.alerthandle{
+    color: red;
+    height: 2rem;
+}
+@media only screen and (max-width: 500px) {
+    .form{
+        width: 90%;
+        margin-left: 5%;
+    }
+}
