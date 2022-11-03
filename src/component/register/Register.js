@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom"
 import { useDispatch } from 'react-redux'
 import { register } from '../../actions/Posts'
 
-export default function Register() {
+export default function Register(props) {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -25,7 +25,7 @@ export default function Register() {
             handleAlert('Password Contain Must 6 Characters')
         }
         else{
-            dispatch(register(user,handleAlert,navigate))
+            dispatch(register(user,handleAlert,navigate,props.progress))
             
         }
         

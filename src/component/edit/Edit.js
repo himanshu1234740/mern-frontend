@@ -80,7 +80,7 @@ export default function Edit() {
     <div className="Mainedit" >
       <div className="Updateprofile">
         <input type="file" name="profile" ref={ref} onChange={Handlefile} style={{ display: 'none' }} />
-        {updateuser.profile ? <img id="profileImage" className="imgupdate" onClick={handleFileUpdate} src={`http://localhost:5000/profile/${login.profile}`} height="70px" width="70px" alt="" /> : <img className="imgupdate" onClick={handleFileUpdate} src={profile} height="70px" width="70px" alt="" />}
+        {updateuser.profile ? <img id="profileImage" className="imgupdate" onClick={handleFileUpdate} src={login.profile} height="70px" width="70px" alt="" /> : <img className="imgupdate" onClick={handleFileUpdate} src={profile} height="70px" width="70px" alt="" />}
         <div className="UpdateUser" >
           <h3  >{login.username}</h3>
           <p className="change" onClick={handleFileUpdate} >Change Profile Photo</p>

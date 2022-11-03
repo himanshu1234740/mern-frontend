@@ -13,7 +13,7 @@ export default function Comment(props) {
 
             return <div className="showUserComment" >
               <div className="userComment">
-              {user[i].profile!==""?<img className="userCommentImage" src={`http://localhost:5000/profile/${user[i].profile}`} alt="" />:<img className="userCommentImage" src={profile} alt="" />}
+              {user[i].profile!==""?<img className="userCommentImage" src={user[i].profile} alt="" />:<img className="userCommentImage" src={profile} alt="" />}
                 <div className="commentData">
                   <h5 className="commentUsername" >{user[i].username}</h5>
                   <p className="WhichComment" >{element.comments}</p>

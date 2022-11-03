@@ -13,7 +13,7 @@ export default function Userprofile(props) {
     }
     return (
         <div className='card' >
-            <img height='75%' width='100%' className='img' src={`http://localhost:5000/upload/${props.img}`} alt="" />
+            <img height='75%' width='100%' className='img' src={props.img} alt="" />
             <div className="likeComment" >
                 <p className="userLike" >Like</p>&nbsp;<p>{props.like}</p>
                 <p className="userComment" >Comment</p>&nbsp;<p>{props.comment}</p>

@@ -86,7 +86,7 @@
     height: 2rem;
 }
 
-
+ 
 @media only screen and (max-width: 500px) {
     .login{
         width: 90%;
@@ -97,4 +97,9 @@
         width: 90%;
         margin-left: 5%;
     }
+    .account{
+        margin-left: 17%;
+        
+    }
+   
 }

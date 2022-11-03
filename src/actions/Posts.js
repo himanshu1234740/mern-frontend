@@ -1,24 +1,29 @@
 import * as api from '../api'
 
-export const getPost = () => (dispatch) => {
-    api.fetchPost().then((response) => {
-        dispatch({ type: 'Fetch_All', payload: response.data })
-
-    }).catch((error) => {
+export const getPost = (setLoading,setProgress) => async (dispatch) => {
+    try {
+        setLoading(true);
+        setProgress(30)
+        const {data} = await api.fetchPost()
+        setLoading(false);
+        setProgress(70)
+        dispatch({ type: 'Fetch_All', payload: data })
+        setProgress(100)
+    } catch (error) {
         console.log(error)
-
-    })
-
-
-
+    }
+    
 }
-export const createPost = (post) => (dispatch) => {
-
+export const createPost = (post,navigate,progress) => (dispatch) => {
+    progress(30)
     api.createPost(post).then((response) => {
+        navigate('/')
+        progress(70)
         dispatch({
             type: 'Create', payload: response.data
         })
-
+        progress(100)
+        console.log(response.data)
     }).catch((error) => {
         console.log(error)
     })
@@ -26,21 +31,25 @@ export const createPost = (post) => (dispatch) => {
 
 }
 
-export const register = (userdata, handleAlert, navigate) => (dispatch) => {
+export const register = (userdata, handleAlert, navigate, progress) => (dispatch) => {
+    progress(30)
     api.register(userdata).then((response) => {
-
+        progress(70)
         if (response.data === 'Username already Exist') {
             dispatch({
                 type: 'existEmail', payload: response.data
             })
             handleAlert(response.data)
+            progress(100)
         } else if (response.data === 'password does not match') {
             dispatch({
                 type: 'notMatch', payload: response.data
             })
             handleAlert(response.data)
+            progress(100)
         } else if (response.data === 'Internal server error') {
             handleAlert("Please Fill All Fields")
+            progress(100)
         }
         else {
             dispatch({
@@ -49,6 +58,7 @@ export const register = (userdata, handleAlert, navigate) => (dispatch) => {
             localStorage.setItem('auth-token', JSON.stringify(response.data.token))
             localStorage.setItem('userinfo', JSON.stringify(response.data.data))
             navigate('/')
+            progress(100)
         }
 
     }).catch((error) => {
@@ -56,13 +66,15 @@ export const register = (userdata, handleAlert, navigate) => (dispatch) => {
     })
 }
 
-export const loginUser = (userLogin, alertHandler, navigate) => (dispatch) => {
+export const loginUser = (userLogin, alertHandler, navigate,progress) => (dispatch) => {
+    progress(30)
     api.login(userLogin).then((response) => {
-
+        progress(70)
         if (response.data === 'invalid informations') {
+            progress(100)
             alertHandler(response.data)
         } else if (response.data === 'Field is empty') {
-
+            progress(100)
             alertHandler(response.data)
         } else {
             dispatch({
@@ -71,6 +83,7 @@ export const loginUser = (userLogin, alertHandler, navigate) => (dispatch) => {
             localStorage.setItem('auth-token', JSON.stringify(response.data.token))
             localStorage.setItem('userinfo', JSON.stringify(response.data.data))
             navigate('/')
+            progress(100)
         }
     }).catch((error) => {
         console.error(error)
@@ -81,6 +94,7 @@ export const data = (userinfo) => (dispatch) => {
         dispatch({
             type: 'userinfo', payload: response.data
         })
+        
     }).catch((error) => {
         console.log(error)
     })
@@ -133,15 +147,20 @@ export const UpdateUser = (userdata,navigate,alertHandle) => (dispatch) => {
         console.log(error)
     })
 }
-export const userLogin = (id) => (dispatch) => {
-
-    api.userLoginData(id).then((response) => {
+export const userLogin = (id,progress) => async (dispatch) => {
+    try {
+        progress(30)
+        const {data} = await api.userLoginData(id)
+        progress(70)
         dispatch({
-            type: 'loginUser', payload: response.data
+            type: 'loginUser', payload: data
         })
-    }).catch((error) => {
-        console.error(error)
-    })
+        progress(100)
+    } catch (error) {
+        console.log(error)
+    }
+    
+      
 }
 
 export const profileimage = (profile, id) => (dispatch) => {

@@ -7,7 +7,7 @@ import Userprofile from './Userprofile'
 import { profileimage, userLogin } from '../../actions/Posts'
 
 
-export default function Profile() {
+export default function Profile(props) {
     const navigate = useNavigate();
     const dispatch = useDispatch()
     const userlogin = JSON.parse(localStorage.getItem('userinfo'))
@@ -15,7 +15,7 @@ export default function Profile() {
 
     const login = useSelector((login) => login.login)
     useEffect(() => {
-        dispatch(userLogin(id))
+        dispatch(userLogin(id,props.progress))
     }, [])
 
     const posts = useSelector((state) => state.posts)
@@ -57,7 +57,7 @@ export default function Profile() {
                 <div className="flex">
                     <div className='userprofile'>
                         {login._id === userlogin._id ? <input type="file" ref={ref} style={{ display: 'none' }} onChange={handleProfileChange} className="userImage" encType="multipart/form-data" /> : null}
-                        {!login.profile ? <img height="180" width="180px" name="profile" onClick={handleFileInput} src={profile} className='profileImg' alt="" /> : <img height="180" width="180px" className='profileImg' name="profile" src={`http://localhost:5000/profile/${login.profile}`} alt="" />}<br />
+                        {!login.profile ? <img height="180" width="180px" name="profile" onClick={handleFileInput} src={profile} className='profileImg' alt="" /> : <img height="180" width="180px" className='profileImg' name="profile" src={login.profile} alt="" />}<br />
 
                         {userlogin._id === login._id ? <Link to="/edit"><button className="edit" >Edit Profile</button></Link> : <Link to="/edit"><button style={{ display: 'none' }} >Edit Profile</button></Link>}
                     </div>
@@ -68,8 +68,9 @@ export default function Profile() {
                         </div>
                         <h3 className="UserNameId" >{login.name}</h3>
                     </div>
-                    {login._id === userlogin._id ? <button className="logout" onClick={handleLogout} >Logout</button> : <button style={{ display: 'none' }} className="logout" onClick={handleLogout} >Logout</button>}
+                    
                 </div>
+                {login._id === userlogin._id ? <button className="logout" onClick={handleLogout} >Logout</button> : <button style={{ display: 'none' }} className="logout" onClick={handleLogout} >Logout</button>}
             </div>
             <hr className="lin" />
             <div className="userPosts" >

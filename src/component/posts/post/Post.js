@@ -11,6 +11,7 @@ import { useNavigate, Link } from "react-router-dom";
 import smile from "../../../images/smile.png";
 import Comment from "./Comment";
 
+
 export default function Post(props) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -106,7 +107,7 @@ export default function Post(props) {
           <div className="sideflex">
             <div className="modal-img">
               <img
-                src={`http://localhost:5000/upload/${props.post.selectedFiles}`}
+                src={props.post.selectedFiles}
                 alt="..."
                 className="modalImg"
               /> 
@@ -116,7 +117,7 @@ export default function Post(props) {
                 {path!==""?<img
                   className="profile"
                   onClick={handleaccount}
-                  src={`http://localhost:5000/profile/${path}`}
+                  src={path}
                   height="47px"
                   width="46px"
                   alt=""
@@ -151,6 +152,7 @@ export default function Post(props) {
           </div>
         </div>
       </div>
+      
       <div className="postItem">
         <div className="topItem">
           <div>
@@ -158,7 +160,7 @@ export default function Post(props) {
               <img
                 className="profile"
                 onClick={handleaccount}
-                src={`http://localhost:5000/profile/${path}`}
+                src={path}
                 height="47px"
                 width="46px"
                 alt=""
@@ -183,7 +185,7 @@ export default function Post(props) {
         </div>
         <div className="mainItem">
           <img
-            src={`http://localhost:5000/upload/${props.post.selectedFiles}`}
+            src={props.post.selectedFiles}
             height="450px"
             width="500px"
             alt="..."

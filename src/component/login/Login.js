@@ -4,7 +4,7 @@ import insta from '../../images/instagram.png'
 import { Link, useNavigate } from "react-router-dom"
 import { useDispatch } from 'react-redux'
 import { loginUser } from '../../actions/Posts'
-export default function Login() {
+export default function Login(props) {
     const dispatch = useDispatch()
     const navigate = useNavigate();
     const [user, setUser] = useState({
@@ -13,12 +13,12 @@ export default function Login() {
     
     const handleSubmit = (e) => {
         e.preventDefault();
-        dispatch(loginUser(user,alertHandler,navigate))
+        dispatch(loginUser(user,alertHandler,navigate,props.progress))
     }
     const [alert,setAlert] = useState({msg: ''})
     function alertHandler(msg) {
         setAlert({msg: msg});
-        setTimeout(()=>{
+        setTimeout(()=>{ 
             setAlert({msg: ''});
         },1500)
     }

@@ -35,7 +35,7 @@
     margin-top: 0.2rem;
     font-size: 18px;
     border: 1px solid black;
-    cursor: pointer;
+    cursor: pointer; 
     background-color:#aa59b9;
     color: #fff;
 }
@@ -50,5 +50,8 @@
     .form{
         width: 90%;
         margin-left: 5%;
+    }
+    .file{
+        margin-left: 10%;
     }
 }

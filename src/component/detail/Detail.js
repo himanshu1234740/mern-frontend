@@ -8,8 +8,8 @@ export default function Detail() {
         posts.map((element) => {
             if (element._id === id) {
                 return <div key={element._id} className="detailImg" >
-                    <img src={`http://localhost:5000/upload/${element.
-                        selectedFiles}`} alt="..." className="imgDetail" />
+                    <img src={element.
+                        selectedFiles} alt="..." className="imgDetail" />
                     <h3>{element.title}</h3>
                     <p>{element.description}</p>
                     <div className="detailflex" >

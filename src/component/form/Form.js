@@ -4,7 +4,7 @@ import './form.css';
 import { useDispatch } from 'react-redux'
 import { createPost } from '../../actions/Posts'
 import { useNavigate } from 'react-router-dom';
-export default function Form() {
+export default function Form(props) {
   const dispatch = useDispatch();
   const navigate = useNavigate()
   // const classes = Styles()
@@ -25,8 +25,8 @@ export default function Form() {
       formdata.append('title', postData.title)
       formdata.append('title', postData.description)
       postData.selectedFiles = formdata
-      dispatch(createPost(formdata))
-      navigate('/')
+      dispatch(createPost(formdata,navigate,props.progress))
+      
     }
 
   }
