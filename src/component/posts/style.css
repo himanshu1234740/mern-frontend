@@ -122,7 +122,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     margin-top: 0.5rem;
-    
+     
     height: 4rem;
     text-align: center
 }
@@ -157,7 +157,7 @@
         
     }
     .modalImg{
-        width: 18rem;
+        width: 132%;
         
         height: 14rem;
         margin-top: 0rem;

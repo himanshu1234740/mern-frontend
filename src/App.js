@@ -41,7 +41,7 @@ const App = () => {
       <LoadingBar
           color='rgb(200, 0, 0)'
           progress={state}
-          height = {3} 
+          height = {4} 
           
         />
       <Routes>
